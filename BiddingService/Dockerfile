@@ -13,6 +13,7 @@ COPY GatewayService/GatewayService.csproj GatewayService/GatewayService.csproj
 COPY BiddingService/BiddingService.csproj BiddingService/BiddingService.csproj
 COPY Contracts/Contracts.csproj Contracts/Contracts.csproj
 COPY IdentityService/IdentityService.csproj IdentityService/IdentityService.csproj
+COPY NotificationService/NotificationService.csproj NotificationService/NotificationService.csproj
 
 # Restore package deps
 RUN dotnet restore Carsties.sln
