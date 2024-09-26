@@ -25,7 +25,7 @@ const orderButtons = [
 ];
 const filterButtons = [
   {
-    label: "Live auctions",
+    label: "Live Auctions",
     icon: GiFlame,
     value: "live",
   },
@@ -49,18 +49,20 @@ export default function Filters() {
     <div className="flex justify-between items-center mb-4">
       <div>
         <span className="uppercase text-sm text-gray-500 mr-2">Filter by</span>
-        <ButtonGroup>
+        <Button.Group>
           {filterButtons.map(({ label, icon: Icon, value }) => (
             <Button
               key={value}
               onClick={() => setParams({ filterBy: value })}
               color={`${filterBy === value ? "red" : "gray"}`}
             >
+              <Icon className="mr-3 h-4 w-4" />
               {label}
             </Button>
           ))}
-        </ButtonGroup>
+        </Button.Group>
       </div>
+
       <div>
         <span className="uppercase text-sm text-gray-500 mr-2">Order by</span>
         <Button.Group>

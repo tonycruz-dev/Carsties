@@ -52,7 +52,7 @@ useEffect(() => {
     setData(data);
     setLoading(false);
   });
-}, [url]);
+}, [setData, url]);
 
 
 if (loading) return <h3>Loading...</h3>;
