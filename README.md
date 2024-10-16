@@ -19,3 +19,7 @@
 
 ## kubectl rollout restart deployment identity-svc
 ## mkcert -key-file server.key -cert-file server.crt id.carsties.local app.carsties.local api.carsties.local
+
+## kubectl delete -f K8S/
+## kubectl apply -f dev-k8s/dev-secrets.yml
+## kubectl apply -f k8s

@@ -15,6 +15,17 @@ spec:
       - name: search-svc
         image: tonycruz/search-svc
         imagePullPolicy: Never
+        env:
+          - name: ConnectionStrings__MongoDbConnection
+            valueFrom:
+              secretKeyRef:
+                name: search-secret
+                key: connString
+          - name: RabbitMQ__Username
+            valueFrom:
+              secretKeyRef:
+                name: rabbit-secret
+                key: username
         envFrom:
           - configMapRef:
               name: search-svc-config
