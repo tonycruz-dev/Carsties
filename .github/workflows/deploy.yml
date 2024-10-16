@@ -13,6 +13,18 @@ jobs:
         service:
           - name: 'tonycruz/auction-svc'
             path: 'AuctionService'
+          - name: 'tonycruz/search-svc'
+            path: 'SearchService'
+          - name: 'tonycruz/bid-svc'
+            path: 'BiddingService'
+          - name: 'tonycruz/identity-svc'
+            path: 'IdentityService'
+          - name: 'tonycruz/gateway-svc'
+            path: 'GatewayService'
+          - name: 'tonycruz/notify-svc'
+            path: 'NotificationService'
+          - name: 'tonycruz/webapp'
+            path: 'frontend/webapp'  
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
