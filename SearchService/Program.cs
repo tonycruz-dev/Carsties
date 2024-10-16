@@ -56,6 +56,9 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
+
+
+
 try
 {
     await DbInitializer.InitDb(app);
